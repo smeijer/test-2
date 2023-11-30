@@ -13,6 +13,7 @@ jobs:
       - name: publish discussion
         uses: magicbell-io/release-discussion-action@main
         with:
-          token: ${{ secrets.MY_GITHUB_TOKEN }}
           repo: smeijer/test
           category: product-changelog
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
