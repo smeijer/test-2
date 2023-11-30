@@ -1,0 +1,18 @@
+name: Release To Discussions
+
+on:
+  release:
+    types: [created, edited, deleted]
+
+jobs:
+  create-release:
+    name: Send Release Notes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: publish discussion
+        uses: magicbell-io/release-discussion-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: smeijer/test
+          category: product-changelog
