@@ -15,5 +15,6 @@ jobs:
         with:
           repo: smeijer/test
           category: product-changelog
+          cycle: week
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
